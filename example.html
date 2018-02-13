@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<script src="js/xapiwrapper.min.js"></script>
+    <script src="dist/viscaWrapper.min.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/ebook.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/practice.js"></script>
+    <script src="js/simpleVer.js"></script>
+    
+    <script type="text/javascript">
+      visca.init('9161F147E5ADD0956793','6CE2FC7E64AD6694EE39');
+      // visca.init('123','456');
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>影片學習服務</li>
+      <button onclick="wasAssignedVideo()">wasAssignedVideo</button>
+      <button onclick="watchedVideoClips()">watchedVideoClips</button>
+      <button onclick="skippedVideoClips()">skippedVideoClips</button>
+      <button onclick="tookVideoNotes()">tookVideoNotes</button>
+      <button onclick="answeredVideoQuestions()">answeredVideoQuestions</button>
+      <button onclick="readVideoHints()">readVideoHints</button>
+      <li>電子書學習服務</li>
+      <button onclick="wasAssignedEBook()">wasAssignedEBook</button>
+      <button onclick="readEBookPage()">readEBookPage</button>
+      <button onclick="bookmarkedEBookPage()">bookmarkedEBookPage</button>
+      <button onclick="searchedEBookString()">searchedEBookString</button>
+      <button onclick="highlightedEBookParagraph()">highlightedEBookParagraph</button>
+      <button onclick="tookEBookNotes()">tookEBookNotes</button>
+      <button onclick="referenceEBookLink()">referenceEBookLink</button>
+      <button onclick="watchedEBookVideo()">watchedEBookVideo</button>
+      <button onclick="skippedEBookVideo()">skippedEBookVideo</button>
+      <li>測驗學習服務</li>
+      <button onclick="answeredQuizQuestions()">answeredQuizQuestions</button>
+      <button onclick="attemptedQuiz()">attemptedQuiz</button>
+      <button onclick="completedQuiz()">completedQuiz</button>
+      <button onclick="choseCorrectOption()">choseCorrectOption</button>
+      <button onclick="readQuizHints()">readQuizHints</button>
+      <li>自我練習服務</li>
+      <button onclick="answeredVideoPracticeQuestions()">answeredVideoPracticeQuestions</button>
+      <button onclick="answeredEBookPracticeQuestions()">answeredEBookPracticeQuestions</button>
+      <button onclick="readEBookHints()">readEBookHints</button>
+    </ul>
+    <code><pre id='output'></pre></code>
+  </body>
+</html>
