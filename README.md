@@ -1,48 +1,45 @@
 # viscaWrapper
 
-viscaWrapper 是基於 xapiwrapper 的函式庫，提供各個學習服務傳送 xapi Statement 的方法，每個方法只需要帶入必要的參數值就可送出 Statement。除此之外，為了簡化傳送 Statement 的過程，在傳送 Statement 之前，會逐一檢查各項參數值是否符合規定之型態，確保送出的資料其格式之正確性。
-
-[使用手冊請參考此](https://wiki.visualcatch.org/tc/viscawrapper.html)。
-
 viscaWrapper provides the methods of sending xapi statement for each learning service. As long as each method is set by the necessary parameter values, you can send the statement. In addition, in order to simplify the process of sending statement, it performs type checking on the passed arguments before the statement is sent. So we can ensure the statement we sent is correct.
 
-[Document refer to here](https://wiki.visualcatch.org/en/viscawrapper.html).
+* [Document refer to here](https://wiki.visualcatch.org/en/viscawrapper.html).
+* [中文說明請參考此](https://github.com/AILTC/viscaWrapper/wiki/%E4%B8%AD%E6%96%87%E7%89%88%E7%B0%A1%E4%BB%8B)。
 
-## 引用
+## Include
 
-### 開發者安裝步驟
+### Installation
 
-請先修改 `src/viscaWrapper.js` 中的 Endpoint 資訊。
+Please set the Endpoint information in `src / viscaWrapper.js` first.
 
 ```
 var vEndpoint = '<ENDPOINT>';
 ```
 
-接著執行下列指令：
+Then execute the following instructions：
 
 ```
 $npm i
 $gulp script
 ```
 
-### 自動編譯
-若您於開發時有自動編譯之需求可使用此指令。
+### Automatic Construction
+Use this command if you have the need to automatic construction during development.
 ```
 $gulp watch
 ```
 
-## 使用方法
+## How to Use
 
-在 HTML 中需要引用下列的檔案，確認引用的 js 檔已下載到電腦中，並調整 script 標籤中引用檔案的位置。
+You need to include the HTML below inside the head section. Confirm the js files have been downloaded to your computer, and modify the file path.
 
 ```
 <script src="xapiwrapper.min.js"></script>
 <script src="viscaWrapper.min.js"></script>
 ```
 
-### 基本模板
+### Basic template
 
-最簡單且可運行的 HTML，帳號及密碼請登入 VisCa 在 API 帳戶管理中取得。可參考 `template.html` 範例。
+Copy the HTML below to begin working with viscaWrapper. You can sign in VisCa to get the account and password in API Account Management. Refer to the `template.html` example.
 
 ```
 <!DOCTYPE html>
@@ -53,9 +50,10 @@ $gulp watch
     <script src="viscaWrapper.js"></script>
 
     <script type="text/javascript">
-        visca.init('帳號','密碼');
+        visca.init('account','password');
+        visca.setGlobalPlatform('your platform URL');
 
-        // 由此開始撰寫程式
+        // Your code here.
 
     </script>
   </head>
@@ -63,7 +61,7 @@ $gulp watch
   </body>
 </html>
 ```
-注意：請避免使用 visca 作為變數名稱，要使用 viscaWrapper 中的各項函式皆必須使用此模組名稱呼叫函式。
+Attention: Avoid using `visca` as variable name. To call the function, it must use this name.
 
 ## License
 Copyright ©2018 III Advanced Intelligence Learning Technology Center
